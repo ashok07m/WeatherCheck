@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext {
+    // app version
+    versionCode = 1
+    versionName = '1.0'
+
+    // API urls
+    baseURL = "\"http://api.openweathermap.org\""
+    API_KEY = "\"bf663dc980b91e9054a552af482ea746\""
+    IMG_URL = "\"http://openweathermap.org/img/w/\""
+
+    // sdk versions
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+
+    // dependencies versions
+    supportLibVerion = '27.1.1'
+    dagger2Version = '2.16'
+    rxjava2Version = '2.1.16'
+    rxandroidVersion = '2.0.2'
+    butterknifeVersion = '8.8.1'
+    retrofitVersion = '2.4.0'
+    gsonVersion = '2.8.5'
+    glideVersion = '4.7.1'
+    dexterVersion = '4.2.0'
+    gplayVersion = '15.0.1'
+
+}
